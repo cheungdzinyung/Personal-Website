@@ -1,0 +1,274 @@
+/********** Global **********/
+
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 1;
+}
+
+h1 {
+  text-transform: lowercase;
+  font-size: 10vw;
+  font-weight: 1000;
+  text-shadow: 5px 5px #ff0000;
+}
+
+h2 {
+  text-transform: lowercase;
+  font-size: 4vw;
+  font-weight: bolder;
+  padding: 5% 0;
+  text-shadow: 3px 3px #ff0000;
+}
+
+h3 {
+  font-size: 1.5rem;
+  padding: 2% 10%;
+}
+
+p {
+  font-weight: bold;
+  padding: 0 10%;
+}
+
+li {
+  list-style-type: none;
+}
+
+i {
+  padding: 15px 10px;
+}
+
+a.nostyle:link {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+a.nostyle:visited {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+/********** Navbar **********/
+
+.navbar {
+  text-transform: lowercase;
+  transition: background-color 1s;
+}
+
+.navbar.scrollDown {
+  background: white;
+}
+
+/********** Splash **********/
+
+.splash {
+  animation: pulse 3s;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.splash p {
+  font-size: 2vw;
+  padding: 0 0 0 40vw;
+  text-shadow: 2px 2px #ff0000;
+}
+
+.arrow {
+  animation: bounce 3s infinite;
+}
+
+.box {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background-color: red;
+  box-shadow: 5px 5px white;
+  transition: all 0.5s;
+  color: transparent;
+}
+
+.box:hover {
+  height: 35px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: #ff0000;
+  color: white;
+}
+
+.splash i {
+  font-size: 3rem;
+  text-shadow: 4px 4px #ff0000;
+}
+
+/********** Interests **********/
+
+.interests {
+  background-color: #000000;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.interests i {
+  font-size: 25px;
+  color: #ff0000;
+}
+
+.interests img {
+  max-width: 100%;
+}
+
+.interests>div {
+  position: relative;
+}
+
+.interests .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 37, 37, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.interests .overlay:hover {
+  opacity: 1;
+}
+
+.interests a {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #ff0000;
+}
+
+/********** Projects **********/
+
+.projects img {
+  width: 60%;
+  height: auto;
+}
+
+.projects i {
+  font-size: 48px;
+  color: #fbcb11;
+}
+
+.projects i:hover {
+  animation: bounce 1.5s;
+}
+
+/********** Contact **********/
+
+.contact {
+  background-image: url('./images/hk map.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  color: #ffffff;
+}
+
+.contact i {
+  font-size: 36px;
+}
+
+.contact i:hover {
+  animation: bounce 1.5s;
+}
+
+form {
+  max-width: 420px;
+  margin: 50px auto;
+}
+
+.feedbackInput {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+  line-height: 20px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  transition: all 0.3s;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  outline: 0;
+}
+
+.feedbackInput:focus {
+  border: 2px solid #ff0000;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  height: 40px;
+  background: #ff0000;
+  border-radius: 10px;
+  border: 0;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: all 0.3s;
+  outline: 0;
+}
+
+[type="submit"]:hover {
+  background: #ffffff;
+  color: #ff0000;
+}
+
+/********** Animations **********/
+
+@keyframes bounce {
+  /*moz:Firefox, ms:IE, webkit:Chrome,Safari*/
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  50% {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
