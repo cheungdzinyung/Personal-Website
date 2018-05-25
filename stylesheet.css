@@ -240,6 +240,17 @@ textarea {
 
 /********** Animations **********/
 
+@keyframes pulse {
+  0%, 100% {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  50% {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
 @keyframes bounce {
   /*moz:Firefox, ms:IE, webkit:Chrome,Safari*/
   0%, 20%, 50%, 80%, 100% {
@@ -262,13 +273,3 @@ textarea {
   }
 }
 
-@keyframes pulse {
-  0%, 100% {
-    background-color: #000000;
-    color: #ffffff;
-  }
-  50% {
-    background-color: #ffffff;
-    color: #000000;
-  }
-}
